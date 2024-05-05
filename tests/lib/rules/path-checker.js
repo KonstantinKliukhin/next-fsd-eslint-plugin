@@ -73,5 +73,16 @@ ruleTester.run("path-checker", rule, {
       errors: [{ message: "All imports should be relative in one slice", type: "ImportDeclaration" }],
       output: "import { anything } from '../blockForms/ArticleBlockFormPicker/ArticleBlockFormPicker'"
     },
+    {
+      filename: 'some/pc/path/src/pages-layer/sign-in/index.ts',
+      options: [
+        {
+          alias: "@"
+        }
+      ],
+      code: "export { SignInPage } from '@/pages-layer/sign-in/ui/SignInPage/SignInPage'",
+      errors: [{ message: "All imports should be relative in one slice", type: "ExportNamedDeclaration" }],
+      output: "export { SignInPage } from './ui/SignInPage/SignInPage'"
+    },
   ],
 });

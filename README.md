@@ -93,7 +93,7 @@ How I use this option in my projects:
 }
 ```
 
-## public-api-imports
+### public-api-imports
 Checks the correctness of imports from the public API
 
 Options:
@@ -101,7 +101,7 @@ Options:
 - ignorePatterns
 - testFilesPatterns
 
-How I use this option in my projects:
+How I use these options in my projects:
 
 ```json
 {
